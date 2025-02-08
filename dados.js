@@ -1496,7 +1496,7 @@ const dados = {
         "nome": "CARLOS DANIEL DE LIMA DA SILVA"
     },
     "40ccb6e4ff662b3156c386a9a8baaf532ea36e941b668e0203042e65832cea1b": {
-        "turno": "INTEGRAL-VESPERTINO",
+        "turno": "MATUTINO",
         "nome": "CARLOS EDUARDO DO NASCIMENTO SILVA"
     },
     "68f692e320ecfe0b26c94fdcb388d39eaa181626abab1930268be5e31eed8a9b": {
@@ -1916,7 +1916,7 @@ const dados = {
         "nome": "KEVILY DOS SANTOS FELIX"
     },
     "f1743520a6118b2b5015724512fc4660e05a9d971336a569f9e70b35662f5054": {
-        "turno": "MATUTINO",
+        "turno": "INTEGRAL-VESPERTINO",
         "nome": "LAÍNY MILENE DA SILVA"
     },
     "b050492c4e26a7fc33608c94e0bd45f0a7687b1ee72dd2eaa90059bca8ff7538": {
