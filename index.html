@@ -1,0 +1,36 @@
+<!-- Arquivo: index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Turno</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="dados.js"></script> <!-- Carrega o arquivo gerado -->
+</head>
+<body>
+    <h2>Consulte seu turno</h2>
+    <input type="text" id="cpf" placeholder="Digite seu CPF" maxlength="14">
+    <button onclick="consultarTurno()">Consultar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function consultarTurno() {
+            let cpf = document.getElementById("cpf").value.replace(/\D/g, ""); // Remove caracteres não numéricos
+            if (cpf.length !== 11) {
+                document.getElementById("resultado").innerText = "CPF inválido";
+                return;
+            }
+
+            let hashCPF = CryptoJS.SHA256(cpf).toString(); // Gera hash do CPF
+
+            if (dados.hasOwnProperty(hashCPF)) { // Verifica se a chave existe
+                let aluno = dados[hashCPF];
+                document.getElementById("resultado").innerText = `Nome: ${aluno.nome}\nSeu turno: ${aluno.turno}`;
+            } else {
+                document.getElementById("resultado").innerText = "CPF não encontrado";
+            }
+        }
+    </script>
+</body>
+</html>
